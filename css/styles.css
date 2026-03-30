@@ -791,7 +791,7 @@ input[type="range"]::-moz-range-thumb {
 
 .council-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
   margin-bottom: 20px;
 }
@@ -1198,27 +1198,26 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .hero-platforms-lbl {
-  font-size: 12px;
-  color: var(--text-faint);
-  font-weight: 500;
+  font-size: 20px;
+  color: var(--text-muted);
+  font-weight: 600;
   white-space: nowrap;
 }
 
 .hero-platforms-logos {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
 }
 
 .hero-platforms-logos img {
-  height: 22px;
+  height: 34px;
   width: auto;
-  opacity: 0.4;
+  opacity: 1;
   transition: opacity 0.2s;
-  filter: grayscale(100%);
 }
 
-.hero-platforms-logos img:hover { opacity: 0.7; }
+.hero-platforms-logos img:hover { opacity: 0.8; }
 
 /* ── COUNCIL AVATAR PHOTO ────────────────────────────────────────────────── */
 .council-avatar {
@@ -1244,10 +1243,9 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .testi-platform img {
-  height: 20px;
+  height: 50px;
   width: auto;
-  opacity: 0.45;
-  filter: grayscale(100%);
+  opacity: 1;
 }
 
 .testi-av-photo {
@@ -1267,7 +1265,7 @@ input[type="range"]::-moz-range-thumb {
   display: block;
 }
 
-
+@media (max-width: 1024px) {
   .strip-grid { grid-template-columns: repeat(3, 1fr); }
   .council-grid { grid-template-columns: repeat(4, 1fr); }
 }
