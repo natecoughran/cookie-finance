@@ -1,11 +1,3 @@
-/* ── YEAR-ROUND BAR TOGGLE ───────────────────────────────────────────────── */
-function toggleBar(el) {
-  const isOpen = el.classList.contains('open');
-  document.querySelectorAll('.yr-bar').forEach(function(b) { b.classList.remove('open'); });
-  if (!isOpen) el.classList.add('open');
-}
-
-
 /* ── NAV: sticky shadow on scroll ──────────────────────────────────────── */
 (function () {
   const nav = document.getElementById('nav');
