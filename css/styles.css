@@ -1273,6 +1273,26 @@ input[type="range"]::-moz-range-thumb {
   display: block;
 }
 
+/* ── SVG BACKGROUNDS ─────────────────────────────────────────────────────── */
+.bg-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-section > .hero,
+.services-strip > .strip-inner,
+.section > .section-inner,
+.council-section > .section-inner,
+.cta-section > .cta-inner {
+  position: relative;
+  z-index: 1;
+}
+
 /* ── SWIMLANE ────────────────────────────────────────────────────────────── */
 .swimlane {
   display: flex;
