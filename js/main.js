@@ -18,7 +18,7 @@
   let entityType = 'sole';
 
   const revSlider   = document.getElementById('rev');
-  const expSlider   = document.getElementById('exp');
+  const expPctSlider = document.getElementById('exp-pct');
   const revDisplay  = document.getElementById('rev-display');
   const expDisplay  = document.getElementById('exp-display');
   const scorpVal    = document.getElementById('scorp-val');
@@ -35,11 +35,12 @@
   }
 
   function calculate() {
-    const rev = parseInt(revSlider.value, 10);
-    const exp = parseInt(expSlider.value, 10);
+    const rev    = parseInt(revSlider.value, 10);
+    const expPct = parseInt(expPctSlider.value, 10);
+    const exp    = Math.round(rev * (expPct / 100));
 
     revDisplay.textContent = fmt(rev);
-    expDisplay.textContent = fmt(exp);
+    expDisplay.textContent = expPct + '%';
 
     const netProfit = Math.max(rev - exp, 0);
 
@@ -78,10 +79,10 @@
   };
 
   revSlider.addEventListener('input', calculate);
-  expSlider.addEventListener('input', calculate);
+  expPctSlider.addEventListener('input', calculate);
 
   calculate();
-})();
+}());
 
 
 /* ── COUNCIL: swap initials when photo fails ──────────────────────────── */
